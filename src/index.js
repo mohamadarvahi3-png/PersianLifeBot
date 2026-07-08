@@ -12,7 +12,7 @@ const client = new Client({
 });
 
 client.once("ready", () => {
-  console.log(`${client.user.tag} is online!`);
+  console.log("Bot is online!");
 
   client.user.setPresence({
     activities: [

@@ -1,5 +1,5 @@
-require("dotenv").config();
 require("./server");
+require("dotenv").config();
 
 const {
   Client,
@@ -10,9 +10,9 @@ const {
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
-    GatewayIntentBits.GuildMembers,
     GatewayIntentBits.GuildMessages,
-    GatewayIntentBits.MessageContent
+    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildMembers
   ]
 });
 
@@ -28,14 +28,6 @@ client.once("ready", () => {
     ],
     status: "online"
   });
-});
-
-client.on("messageCreate", (message) => {
-  if (message.author.bot) return;
-
-  if (message.content === "!ping") {
-    message.reply("🏓 Pong!");
-  }
 });
 
 client.login(process.env.TOKEN);

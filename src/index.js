@@ -2,7 +2,9 @@ console.log("Bot is starting...");
 require("./server");
 require("./deploy-commands");
 require("dotenv").config();
-
+console.log("TOKEN:", process.env.TOKEN ? "OK" : "Missing");
+console.log("CLIENT_ID:", process.env.CLIENT_ID);
+console.log("GUILD_ID:", process.env.GUILD_ID);
 const {
   Client,
   GatewayIntentBits,

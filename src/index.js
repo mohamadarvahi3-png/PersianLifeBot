@@ -32,5 +32,5 @@ client.once("ready", () => {
 
 require("dotenv").config();
 
-console.log(process.env.TOKEN);
-client.login(process.env.TOKEN);
+console.log("TOKEN:", process.env.TOKEN);
+console.log("Length:", process.env.TOKEN?.length);

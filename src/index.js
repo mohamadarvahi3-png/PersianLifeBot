@@ -1,3 +1,4 @@
+console.log("Bot is starting...");
 require("./server");
 require("dotenv").config();
 

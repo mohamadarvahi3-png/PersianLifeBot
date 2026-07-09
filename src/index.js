@@ -32,4 +32,5 @@ client.once("ready", () => {
 
 require("dotenv").config();
 
+console.log(process.env.TOKEN);
 client.login(process.env.TOKEN);

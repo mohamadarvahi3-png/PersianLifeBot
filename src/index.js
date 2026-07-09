@@ -1,7 +1,7 @@
 console.log("Bot is starting...");
 require("./server");
-require("./deploy-commands");
 require("dotenv").config();
+require("./deploy-commands");
 console.log("TOKEN:", process.env.TOKEN ? "OK" : "Missing");
 console.log("CLIENT_ID:", process.env.CLIENT_ID);
 console.log("GUILD_ID:", process.env.GUILD_ID);
@@ -34,8 +34,6 @@ client.once("ready", () => {
   });
 });
 
-console.log("TOKEN:", process.env.TOKEN);
-console.log("Length:", process.env.TOKEN?.length);
 
 client.login(process.env.TOKEN);
 console.log(JSON.stringify(process.env.TOKEN));

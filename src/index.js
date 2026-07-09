@@ -35,3 +35,4 @@ console.log("TOKEN:", process.env.TOKEN);
 console.log("Length:", process.env.TOKEN?.length);
 
 client.login(process.env.TOKEN);
+console.log(JSON.stringify(process.env.TOKEN));

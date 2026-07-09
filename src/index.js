@@ -1,7 +1,11 @@
 require("./server");
 require("dotenv").config();
 
-const { Client, GatewayIntentBits, ActivityType } = require("discord.js");
+const {
+  Client,
+  GatewayIntentBits,
+  ActivityType
+} = require("discord.js");
 
 const client = new Client({
   intents: [
@@ -19,10 +23,10 @@ client.once("ready", () => {
     activities: [
       {
         name: "Persian Life",
-        type: ActivityType.Playing
-      }
+        type: ActivityType.Playing,
+      },
     ],
-    status: "online"
+    status: "online",
   });
 });
 

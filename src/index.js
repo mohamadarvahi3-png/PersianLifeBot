@@ -30,7 +30,7 @@ client.once("ready", () => {
   });
 });
 
-require("dotenv").config();
-
 console.log("TOKEN:", process.env.TOKEN);
 console.log("Length:", process.env.TOKEN?.length);
+
+client.login(process.env.TOKEN);

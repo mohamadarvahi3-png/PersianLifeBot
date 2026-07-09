@@ -1,5 +1,6 @@
 console.log("Bot is starting...");
 require("./server");
+require("./deploy-commands");
 require("dotenv").config();
 
 const {

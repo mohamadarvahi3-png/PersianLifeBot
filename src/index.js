@@ -1,3 +1,4 @@
+require("./server");
 require("dotenv").config();
 
 const { Client, GatewayIntentBits, ActivityType } = require("discord.js");
@@ -12,7 +13,7 @@ const client = new Client({
 });
 
 client.once("ready", () => {
-  console.log("Bot is online!");
+  console.log(`${client.user.tag} is online!`);
 
   client.user.setPresence({
     activities: [

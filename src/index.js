@@ -1,5 +1,5 @@
-require("./server");
 require("dotenv").config();
+require("./server");
 
 const {
   Client,
@@ -23,11 +23,19 @@ client.once("ready", () => {
     activities: [
       {
         name: "Persian Life",
-        type: ActivityType.Playing,
-      },
+        type: ActivityType.Playing
+      }
     ],
-    status: "online",
+    status: "online"
   });
+});
+
+client.on("messageCreate", (message) => {
+  if (message.author.bot) return;
+
+  if (message.content === "!ping") {
+    message.reply("🏓 Pong!");
+  }
 });
 
 client.login(process.env.TOKEN);

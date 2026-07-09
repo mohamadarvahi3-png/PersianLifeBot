@@ -19,4 +19,10 @@ client.once(Events.ClientReady, c => {
 
 client.login(process.env.TOKEN)
   .then(() => console.log("Login موفق"))
-  .catch(err => console.error("Login Error:", err));
+  .catch(err => console.error("Login Error:", err));client.on(Events.InteractionCreate, async interaction => {
+  if (!interaction.isChatInputCommand()) return;
+
+  if (interaction.commandName === "ping") {
+    await interaction.reply("🏓 Pong!");
+  }
+});

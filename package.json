@@ -1,4 +1,4 @@
-{
+
   "name": "persian-life-bot",
   "version": "1.0.0",
   "description": "Official Persian Life Discord Bot",
@@ -7,7 +7,7 @@
     "start": "node src/index.js"
   },
   "dependencies": {
-    "discord.js": "^14.21.0",
-    "dotenv": "^16.4.7"
+    "discord.js": "^16.4.7",
+    "dotenv": "^4.19.2"
   }
 }

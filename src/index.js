@@ -13,7 +13,7 @@ commandHandler(client);
   intents: [GatewayIntentBits.Guilds],
 });
 
-client.once(Events.ClientReady, (c) => {
+client.on(Events.InteractionCreate, async (interaction) => {
   console.log(`${c.user.tag} آنلاین شد`);
 });
 

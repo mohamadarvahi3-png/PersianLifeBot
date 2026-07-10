@@ -7,8 +7,9 @@ const {
   Events,
   ChannelType,
 } = require("discord.js");
-
+const commandHandler = require("./handlers/commandHandler");
 const client = new Client({
+commandHandler(client);
   intents: [GatewayIntentBits.Guilds],
 });
 
